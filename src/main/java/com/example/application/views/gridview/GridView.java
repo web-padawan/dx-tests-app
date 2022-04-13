@@ -37,5 +37,15 @@ public class GridView extends Div {
         grid.addThemeVariants(GridVariant.LUMO_NO_BORDER);
 
         add(grid);
+
+        /*
+         *  1. Set max width on the grid to make it scroll horizontally.
+         *
+         *  2. Make the "first name" column frozen.
+         *
+         *  3. Make the "occupation" column frozen.
+         *
+         *  4. Make both frozen columns resizable and try to resize them.
+         */
     }
 }

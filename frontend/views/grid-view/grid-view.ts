@@ -20,6 +20,15 @@ export class GridView extends View {
   private gridDataProvider = this.getGridData.bind(this);
 
   render() {
+    /*
+     *  1. Set max width on the grid to make it scroll horizontally.
+     *
+     *  2. Make the "first name" column frozen.
+     *
+     *  3. Make the "occupation" column frozen.
+     *
+     *  4. Make both frozen columns resizable and try to resize them.
+     */
     return html`
       <vaadin-grid
         id="grid"
