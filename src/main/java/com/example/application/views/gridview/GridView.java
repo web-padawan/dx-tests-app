@@ -1,8 +1,7 @@
 package com.example.application.views.gridview;
 
-import com.example.application.data.entity.SamplePerson;
-import com.example.application.data.service.SamplePersonService;
-import com.example.application.views.MainLayout;
+import com.example.application.data.entity.Person;
+import com.example.application.data.service.PersonService;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.grid.GridVariant;
 import com.vaadin.flow.component.html.Div;
@@ -13,18 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 
 @PageTitle("Grid View (Java)")
-@Route(value = "grid-view-java", layout = MainLayout.class)
+@Route(value = "grid-view-java")
 public class GridView extends Div {
 
-    private Grid<SamplePerson> grid = new Grid<>(SamplePerson.class, false);
+    private Grid<Person> grid = new Grid<>(Person.class, false);
 
-    private SamplePerson samplePerson;
-
-    private final SamplePersonService samplePersonService;
+    private final PersonService personService;
 
     @Autowired
-    public GridView(SamplePersonService samplePersonService) {
-        this.samplePersonService = samplePersonService;
+    public GridView(PersonService personService) {
+        this.personService = personService;
         addClassNames("grid-view");
 
         grid.addColumn("firstName");
@@ -34,7 +31,7 @@ public class GridView extends Div {
         grid.addColumn("dateOfBirth");
         grid.addColumn("occupation");
 
-        grid.setItems(query -> samplePersonService.list(
+        grid.setItems(query -> personService.list(
                 PageRequest.of(query.getPage(), query.getPageSize(), VaadinSpringDataHelpers.toSpringDataSort(query)))
                 .stream());
         grid.addThemeVariants(GridVariant.LUMO_NO_BORDER);

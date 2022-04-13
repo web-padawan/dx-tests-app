@@ -1,6 +1,6 @@
 package com.example.application.data.service;
 
-import com.example.application.data.entity.SamplePerson;
+import com.example.application.data.entity.Person;
 import java.util.Optional;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,20 +9,20 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SamplePersonService {
+public class PersonService {
 
-    private final SamplePersonRepository repository;
+    private final PersonRepository repository;
 
     @Autowired
-    public SamplePersonService(SamplePersonRepository repository) {
+    public PersonService(PersonRepository repository) {
         this.repository = repository;
     }
 
-    public Optional<SamplePerson> get(UUID id) {
+    public Optional<Person> get(UUID id) {
         return repository.findById(id);
     }
 
-    public SamplePerson update(SamplePerson entity) {
+    public Person update(Person entity) {
         return repository.save(entity);
     }
 
@@ -30,7 +30,7 @@ public class SamplePersonService {
         repository.deleteById(id);
     }
 
-    public Page<SamplePerson> list(Pageable pageable) {
+    public Page<Person> list(Pageable pageable) {
         return repository.findAll(pageable);
     }
 

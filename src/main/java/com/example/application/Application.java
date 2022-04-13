@@ -18,7 +18,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 @Theme(value = "dxtestsapp")
 @PWA(name = "DX Tests App", shortName = "DX Tests App", offlineResources = {})
-@NpmPackage(value = "line-awesome", version = "1.3.0")
+@NpmPackage(value = "@adobe/lit-mobx", version = "2.0.0")
+@NpmPackage(value = "mobx", version = "^6.3.5")
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
 
     public static void main(String[] args) {
