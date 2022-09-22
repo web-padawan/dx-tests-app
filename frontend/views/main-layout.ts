@@ -61,24 +61,20 @@ export class MainLayout extends Layout {
   private getMenuRoutes(): RouteInfo[] {
     return [
       {
-        path: 'dialog-view-java',
-        title: 'Dialog View (Java)'
+        path: 'tabsheet-view',
+        title: 'TabSheet View (Flow)'
       },
       {
-        path: 'grid-view-java',
-        title: 'Grid View (Java)'
+        path: 'tooltip-view',
+        title: 'Tooltip View (Flow)'
       },
       {
-        path: 'lumo-view',
-        title: 'Lumo View'
+        path: 'tabsheet-view-ts',
+        title: 'TabSheet View (Hilla)'
       },
       {
-        path: 'grid-view-ts',
-        title: 'Grid View (TS)'
-      },
-      {
-        path: 'dialog-view-ts',
-        title: 'Dialog View (TS)'
+        path: 'tooltip-view-ts',
+        title: 'Tooltip View (Hilla)'
       },
     ];
   }
