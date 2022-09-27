@@ -51,6 +51,7 @@ export class TooltipView extends View {
     { description: 'Add tooltip for Grid (status column only). Content: status of the task', status: 'todo' },
     { description: 'Add tooltip for "Actions" (show above). Content: "Select rows first"', status: 'todo' },
     { description: 'Add tooltips for each button in the Menu Bar. Content: button action', status: 'todo' },
+    { description: 'Configure all tooltips at once to wait before opening and closing', status: 'todo' },
   ];
 
   @state()
@@ -80,14 +81,26 @@ export class TooltipView extends View {
     /**
      * Tasks to complete:
      *
-     * 1. Add tooltip for the Description field. Content: "Max 100 characters"
-     * 2. Change the tooltip to make it appear on the right
-     * 3. Make sure the tooltip only opens after waiting for 0.5s
-     * 4. Add tooltip for "Create" button. Content: "All fields are required"
-     * 5. Show the tooltip when "Create" button is disabled and hide otherwise
-     * 6. Add tooltip for Grid (status column only). Content: status of the task
-     * 7. Add tooltip for "Actions" (show above). Content: "Select rows first"
-     * 8. Add tooltips for each button in the Menu Bar. Content: button action
+     * Task 1.
+     * - Add tooltip for the Description field. Content: "Max 100 characters"
+     * - Change the tooltip to make it appear on the right
+     * - Make sure the tooltip only opens after waiting for 0.5s
+     *
+     * Task 2.
+     * - Add tooltip for "Create" button. Content: "All fields are required"
+     * - Show the tooltip when "Create" button is disabled and hide otherwise
+     *
+     * Task 3.
+     * - Add tooltip for Grid (status column only). Content: status of the task
+     *
+     * Task 4.
+     * - Add tooltip for "Actions" (show above). Content: "Select rows first"
+     *
+     * Task 5.
+     * - Add tooltips for each button in the Menu Bar. Content: button action
+     *
+     * Task 6.
+     * - Configure all tooltips at once to wait before opening and closing
      */
     return html`
       <vaadin-vertical-layout theme="padding spacing">
@@ -97,6 +110,7 @@ export class TooltipView extends View {
             .items="${this.tasks}"
             .selectedItems="${this.selectedTasks}"
             style="width: 700px"
+            all-rows-visible
             @selected-items-changed="${(event: GridSelectedItemsChangedEvent<Task>) =>
               (this.selectedTasks = event.detail.value)}"
           >

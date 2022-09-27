@@ -38,14 +38,26 @@ public class TooltipView extends VerticalLayout {
     /**
      * Tasks to complete:
      *
+     * Task 1.
      * - Add tooltip for the Description field. Content: "Max 100 characters"
      * - Change the tooltip to make it appear on the right
      * - Make sure the tooltip only opens after waiting for 0.5s
+     *
+     * Task 2.
      * - Add tooltip for "Create" button. Content: "All fields are required"
-     * - Show the tooltip when the "Create" button is disabled and hide otherwise
+     * - Show the tooltip when "Create" button is disabled and hide otherwise
+     *
+     * Task 3.
      * - Add tooltip for Grid (status column only). Content: status of the task
+     *
+     * Task 4.
      * - Add tooltip for "Actions" (show above). Content: "Select rows first"
+     *
+     * Task 5.
      * - Add tooltips for each button in the Menu Bar. Content: button action
+     *
+     * Task 6.
+     * - Configure all tooltips at once to wait before opening and closing
      */
     public TooltipView() {
         SplitLayout splitLayout = new SplitLayout();
@@ -53,6 +65,7 @@ public class TooltipView extends VerticalLayout {
         // List of tasks
         grid.setWidth("700px");
         grid.setSelectionMode(Grid.SelectionMode.MULTI);
+        grid.setAllRowsVisible(true);
         grid.addColumn(Task::getDescription).setHeader("Task Description");
         grid.addComponentColumn(task -> createStatusIcon(task.getStatus()))
                 .setHeader("Status").setFlexGrow(0);
@@ -154,6 +167,9 @@ public class TooltipView extends VerticalLayout {
                     statuses.get(0)),
             new Task(
                     "Add tooltips for each button in the Menu Bar. Content: button action",
+                    statuses.get(0)),
+            new Task(
+                    "Configure all tooltips at once to wait before opening and closing",
                     statuses.get(0))));
 
     private void addTask() {
