@@ -14,12 +14,12 @@ public class TabSheetView extends VerticalLayout {
      * Tasks to complete:
      *
      * 1.
-     * 1.1. Add a TabSheet to the view
+     * 1.1. Add a TabSheet to the view (make it 100% wide)
      * 1.2. Add tabs with captions “Analytics”, “Customers”, “Dashboards”, and anything (like lorem ipsum) as the content
      * 1.3. Add a disabled tab with the caption “Orders” and anything as the content
      * 
      * 2.
-     * 2.1. Add a button that adds a new tab "Documents" before the currently last tab (without counting its index)
+     * 2.1. Add a button that adds a new tab "Documents" before the "Dashboards" tab (without counting its index)
      * 2.2. Add a button that removes the first tab
      * 2.3. When changing a tab, print the index of the previously selected tab
      * 

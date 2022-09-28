@@ -9,7 +9,7 @@ export class TabSheetView extends View {
      * Tasks to complete:
      *
      * 1.
-     * 1.1. Add a TabSheet to the view
+     * 1.1. Add a TabSheet to the view (make it 100% wide)
      * 1.2. Add tabs with captions “Analytics”, “Customers”, “Dashboards”, and anything (like lorem ipsum) as the content
      * 1.3. Add a disabled tab with the caption “Orders” and anything as the content
      * 
