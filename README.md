@@ -30,3 +30,8 @@ Use `tabsheet-view.ts` for development.
 ### 4. Tooltip (Hilla)
 
 Use `tooltip-view.ts` for development.
+
+## Documentation
+
+- [TabSheet](https://vaadin.com/docs/latest/components/tabs)
+- [Tooltip](https://vaadin.com/docs/latest/components/tooltip)
