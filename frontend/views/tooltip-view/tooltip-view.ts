@@ -44,10 +44,10 @@ export class TooltipView extends View {
   @state()
   private tasks: Task[] = [
     { description: 'Add tooltip for the Description field. Content: "Max 100 characters"', status: 'todo' },
-    { description: 'Change the tooltip to make it appear on the right', status: 'todo' },
     { description: 'Make sure the tooltip only opens after waiting for 0.5s', status: 'todo' },
     { description: 'Add tooltip for "Create" button. Content: "All fields are required"', status: 'todo' },
     { description: 'Show the tooltip when "Create" button is disabled and hide otherwise', status: 'todo' },
+    { description: 'Change the "Create" button tooltip to make it appear on the right', status: 'todo' },
     { description: 'Add tooltip for Grid (status column only). Content: status of the task', status: 'todo' },
     { description: 'Add tooltip for "Actions" (show above). Content: "Select rows first"', status: 'todo' },
     { description: 'Add tooltips for each button in the Menu Bar. Content: button action', status: 'todo' },
@@ -83,11 +83,11 @@ export class TooltipView extends View {
      *
      * Task 1.
      * - Add tooltip for the Description field. Content: "Max 100 characters"
-     * - Change the tooltip to make it appear on the right
      * - Make sure the tooltip only opens after waiting for 0.5s
      *
      * Task 2.
      * - Add tooltip for "Create" button. Content: "All fields are required"
+     * - Change the "Create" button tooltip to make it appear on the right
      * - Show the tooltip when "Create" button is disabled and hide otherwise
      *
      * Task 3.

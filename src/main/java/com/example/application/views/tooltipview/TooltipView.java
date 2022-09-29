@@ -40,11 +40,11 @@ public class TooltipView extends VerticalLayout {
      *
      * Task 1.
      * - Add tooltip for the Description field. Content: "Max 100 characters"
-     * - Change the tooltip to make it appear on the right
      * - Make sure the tooltip only opens after waiting for 0.5s
      *
      * Task 2.
      * - Add tooltip for "Create" button. Content: "All fields are required"
+     * - Change the "Create" button tooltip to make it appear on the right
      * - Show the tooltip when "Create" button is disabled and hide otherwise
      *
      * Task 3.
@@ -149,8 +149,6 @@ public class TooltipView extends VerticalLayout {
     private List<Task> tasks = new ArrayList<Task>(Arrays.asList(new Task(
             "Add tooltip for the Description field. Content: \"Max 100 characters\"",
             statuses.get(0)),
-            new Task("Change the tooltip to make it appear on the right",
-                    statuses.get(0)),
             new Task("Make sure the tooltip only opens after waiting for 0.5s",
                     statuses.get(0)),
             new Task(
@@ -158,6 +156,9 @@ public class TooltipView extends VerticalLayout {
                     statuses.get(0)),
             new Task(
                     "Show the tooltip when \"Create\" button is disabled and hide otherwise",
+                    statuses.get(0)),
+            new Task(
+                    "Change the \"Create\" button tooltip to make it appear on the right",
                     statuses.get(0)),
             new Task(
                     "Add tooltip for Grid (status column only). Content: status of the task",
