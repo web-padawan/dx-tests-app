@@ -10,6 +10,7 @@ import '@vaadin/menu-bar';
 import '@vaadin/radio-group';
 import '@vaadin/split-layout';
 import '@vaadin/text-field';
+import '@vaadin/tooltip';
 import '@vaadin/vertical-layout';
 import { columnBodyRenderer } from '@vaadin/grid/lit.js';
 import { GridSelectedItemsChangedEvent } from '@vaadin/grid';
@@ -106,37 +107,7 @@ export class TooltipView extends View {
       <vaadin-vertical-layout theme="padding spacing">
         <vaadin-split-layout>
           <!-- List of tasks -->
-          <vaadin-grid
-            .items="${this.tasks}"
-            .selectedItems="${this.selectedTasks}"
-            style="width: 700px"
-            all-rows-visible
-            @selected-items-changed="${(event: GridSelectedItemsChangedEvent<Task>) =>
-              (this.selectedTasks = event.detail.value)}"
-          >
-            <vaadin-grid-selection-column
-              auto-select
-              @select-all-changed="${(event: GridSelectionColumnSelectAllChangedEvent) =>
-                (this.selectedTasks = event.detail.value ? this.tasks : this.selectedTasks)}"
-            ></vaadin-grid-selection-column>
-            <vaadin-grid-column path="description" header="Task Description"></vaadin-grid-column>
-            <vaadin-grid-column
-              path="status"
-              flex-grow="0"
-              ${columnBodyRenderer((item: any) => {
-                let icon = 'minus-square-o';
-                switch (item.status) {
-                  case 'wip':
-                    icon = 'hourglass';
-                    break;
-                  case 'done':
-                    icon = 'check-square-o';
-                    break;
-                }
-                return html`<vaadin-icon icon="vaadin:${icon}"></vaadin-icon>`;
-              }, [])}
-            ></vaadin-grid-column>
-          </vaadin-grid>
+          <div>Grid with a list of tasks goes here</div>
 
           <!-- Create task form -->
           <vaadin-vertical-layout theme="padding spacing">
@@ -157,6 +128,13 @@ export class TooltipView extends View {
 
             <vaadin-button .disabled="${!this.newTask || !this.newTaskStatus}" @click="${this.onCreateClick}">
               Create
+              <vaadin-tooltip
+                manual
+                .opened="${!this.newTask || !this.newTaskStatus}"
+                position="end"
+                text="All fields are required"
+                slot="tooltip"
+              ></vaadin-tooltip>
             </vaadin-button>
           </vaadin-vertical-layout>
         </vaadin-split-layout>
