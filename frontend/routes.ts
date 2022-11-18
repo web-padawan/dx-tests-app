@@ -1,4 +1,4 @@
-import { Flow } from '@vaadin/flow-frontend';
+import { Flow } from 'Frontend/generated/jar-resources/Flow.js';
 import { Route } from '@vaadin/router';
 import './views/main-layout';
 
