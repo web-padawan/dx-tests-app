@@ -15,10 +15,14 @@ IDEs](https://vaadin.com/docs/latest/guide/step-by-step/importing) (Eclipse, Int
 The test session consists of the following tasks.
 Please see comments in the code for descriptions.
 
-### 1. GridPro (Flow)
+### 1. Checkbox (Flow)
+
+Use `CheckboxView.java` for development.
+
+### 2. GridPro (Flow)
 
 Use `GridProView.java` for development.
 
-### 2. GridPro (Hilla)
+### 3. GridPro (Hilla)
 
 Use `grid-pro-view.ts` for development.

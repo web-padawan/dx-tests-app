@@ -10,11 +10,9 @@ import com.vaadin.flow.component.gridpro.GridProVariant;
 import com.vaadin.flow.component.textfield.IntegerField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.RouteAlias;
 
 @PageTitle("Grid Pro View")
 @Route(value = "grid-pro-view")
-@RouteAlias(value = "")
 public class GridProView extends VerticalLayout {
     /**
      * Configure GridPro as follows:
