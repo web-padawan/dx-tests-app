@@ -61,20 +61,12 @@ export class MainLayout extends Layout {
   private getMenuRoutes(): RouteInfo[] {
     return [
       {
-        path: 'tabsheet-view',
-        title: 'TabSheet View (Flow)'
+        path: 'grid-pro-view',
+        title: 'GridPro View (Flow)'
       },
       {
-        path: 'tooltip-view',
-        title: 'Tooltip View (Flow)'
-      },
-      {
-        path: 'tabsheet-view-ts',
-        title: 'TabSheet View (Hilla)'
-      },
-      {
-        path: 'tooltip-view-ts',
-        title: 'Tooltip View (Hilla)'
+        path: 'grid-pro-view-hilla',
+        title: 'GridPro View (Hilla)'
       },
     ];
   }

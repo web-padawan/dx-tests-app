@@ -13,20 +13,11 @@ export type ViewRoute = Route & {
 
 export const views: ViewRoute[] = [
   {
-    path: 'tabsheet-view-ts',
-    component: 'tabsheet-view',
-    title: 'TabSheet View (Hilla)',
+    path: 'grid-pro-view-hilla',
+    component: 'grid-pro-view',
+    title: 'GridPro View (Hilla)',
     action: async (_context, _command) => {
-      await import('./views/tabsheet-view/tabsheet-view');
-      return;
-    },
-  },
-  {
-    path: 'tooltip-view-ts',
-    component: 'tooltip-view',
-    title: 'Tooltip View (Hilla)',
-    action: async (_context, _command) => {
-      await import('./views/tooltip-view/tooltip-view');
+      await import('./views/grid-pro-view/grid-pro-view');
       return;
     },
   },
