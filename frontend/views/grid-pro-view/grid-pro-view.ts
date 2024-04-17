@@ -21,11 +21,13 @@ export class GridProView extends View {
   ];
 
   /**
-   * Configure GridPro as follows:
+   * Configure <vaadin-grid-pro> as follows:
    *
    * 1. Only allow editing hours when the task status is "in progress"
    * 2. Disallow changing task status and hours when the task is archived
    * 3. Only allow changing archived if the status is "done" or "canceled"
+   *
+   * Documentation: https://cdn.vaadin.com/vaadin-web-components/24.4.0-alpha22/
    */
   render() {
     return html`
