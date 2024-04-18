@@ -32,7 +32,7 @@ export class GridProView extends View {
   render() {
     return html`
       <vaadin-vertical-layout theme="padding">
-        <vaadin-grid-pro .items="${this.tasks}" all-rows-visible>
+        <vaadin-grid-pro .items="${this.tasks}" all-rows-visible theme="highlight-read-only-cells">
           <vaadin-grid-pro-edit-column path="name"></vaadin-grid-pro-edit-column>
            <vaadin-grid-pro-edit-column
             path="status"
