@@ -1,6 +1,6 @@
-import { createMenuItems, useViewConfig } from '@vaadin/hilla-file-router/runtime.js';
+import { useViewConfig } from '@vaadin/hilla-file-router/runtime.js';
 import { effect, signal } from '@vaadin/hilla-react-signals';
-import { AppLayout, DrawerToggle, Icon, SideNav, SideNavItem } from '@vaadin/react-components';
+import { AppLayout, DrawerToggle, SideNav, SideNavItem } from '@vaadin/react-components';
 import { Suspense, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
@@ -28,12 +28,11 @@ export default function MainLayout() {
         <header className="flex flex-col gap-m">
           <span className="font-semibold text-l">My App</span>
           <SideNav onNavigate={({ path }) => navigate(path!)} location={location}>
-            {createMenuItems().map(({ to, title, icon }) => (
-              <SideNavItem path={to} key={to}>
-                {icon ? <Icon src={icon} slot="prefix"></Icon> : <></>}
-                {title}
-              </SideNavItem>
-            ))}
+            <SideNavItem path="/">Home</SideNavItem>
+            <SideNavItem path="/app-settings-flow">App Settings (Flow)</SideNavItem>
+            <SideNavItem path="/app-settings-react">App Settings (React)</SideNavItem>
+            <SideNavItem path="/cvv-field-flow">CVV Field (Flow)</SideNavItem>
+            <SideNavItem path="/cvv-field-react">CVV Field (React)</SideNavItem>
           </SideNav>
         </header>
       </div>
