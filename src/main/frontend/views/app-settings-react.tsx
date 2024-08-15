@@ -16,9 +16,8 @@ export default function AppSettingsView() {
   // 5. Disallow closing the popup by Esc key and outside click, so that it can be only closed
   //    by pressing the "Apply" or "Cancel" button.
 
-  const [opened, setOpened] = useState<boolean>(false);
-  const [theme, setTheme] = useState<string>('light');
-  const [direction, setDirection] = useState<string>('ltr');
+  const [theme, setTheme] = useState<string>(document.body.getAttribute('theme') || 'light');
+  const [direction, setDirection] = useState<string>(document.documentElement.getAttribute('dir') || 'ltr');
 
   useEffect(() => {
     if (theme === 'dark') {
