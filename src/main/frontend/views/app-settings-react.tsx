@@ -7,14 +7,12 @@ export const config: ViewConfig = { title: 'App Settings (React)' };
 
 export default function AppSettingsView() {
   // TODO:
-  // 1. Change "Settings" form to open in the popup below the button instead of the dialog.
-  // 2. Make the other elements on the page greyed out when "Settings" popup is open,
+  // 1. Change "Settings" form to open in the popover below the button instead of the dialog.
+  // 2. Make the other elements on the page greyed out when "Settings" popover is open,
   //    similarly to how it was looking when the dialog was used.
-  // 3. Add "Apply" button to the popup, make it close the popup and apply changes on click
-  //    (instead of setting theme / direction immediately when selecting them).
-  // 4. Add "Cancel" button to the popup, make it close the popup without applying changes.
-  // 5. Disallow closing the popup by Esc key and outside click, so that it can be only closed
-  //    by pressing the "Apply" or "Cancel" button.
+  // 3. Add "Close" button to the popover, make it close the popover.
+  // 4. Disallow closing the popover by Esc key and outside click, so that it can be only
+  //    closed by pressing the "Close" button.
 
   const [theme, setTheme] = useState<string>(document.body.getAttribute('theme') || 'light');
   const [direction, setDirection] = useState<string>(document.documentElement.getAttribute('dir') || 'ltr');
