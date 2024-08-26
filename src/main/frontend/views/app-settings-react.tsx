@@ -14,6 +14,7 @@ export default function AppSettingsView() {
   // 4. Disallow closing the popover by Esc key and outside click, so that it can be only
   //    closed by pressing the "Close" button.
 
+  const [opened, setOpened] = useState<boolean>(false);
   const [theme, setTheme] = useState<string>(document.body.getAttribute('theme') || 'light');
   const [direction, setDirection] = useState<string>(document.documentElement.getAttribute('dir') || 'ltr');
 
