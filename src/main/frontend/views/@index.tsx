@@ -9,16 +9,10 @@ export default function HomeView() {
     <VerticalLayout theme="padding spacing">
       <ul>
         <li>
-          <NavLink to="/app-settings-flow">App Settings (Flow)</NavLink>
+          <NavLink to="/flow">Flow view</NavLink>
         </li>
         <li>
-          <NavLink to="/app-settings-react">App Settings (React)</NavLink>
-        </li>
-        <li>
-          <NavLink to="/cvv-field-flow">CVV Field (Flow)</NavLink>
-        </li>
-        <li>
-          <NavLink to="/cvv-field-react">CVV Field (React)</NavLink>
+          <NavLink to="/react">React view</NavLink>
         </li>
       </ul>
     </VerticalLayout>

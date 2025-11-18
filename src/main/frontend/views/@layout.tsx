@@ -29,10 +29,8 @@ export default function MainLayout() {
           <span className="font-semibold text-l">My App</span>
           <SideNav onNavigate={({ path }) => navigate(path!)} location={location}>
             <SideNavItem path="/">Home</SideNavItem>
-            <SideNavItem path="/app-settings-flow">App Settings (Flow)</SideNavItem>
-            <SideNavItem path="/app-settings-react">App Settings (React)</SideNavItem>
-            <SideNavItem path="/cvv-field-flow">CVV Field (Flow)</SideNavItem>
-            <SideNavItem path="/cvv-field-react">CVV Field (React)</SideNavItem>
+            <SideNavItem path="/flow">Flow view</SideNavItem>
+            <SideNavItem path="/react">React view</SideNavItem>
           </SideNav>
         </header>
       </div>
