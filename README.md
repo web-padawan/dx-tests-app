@@ -12,4 +12,5 @@ IDEs](https://vaadin.com/docs/latest/getting-started/import) (Eclipse, IntelliJ 
 
 ## Tasks
 
-Check out `FlowView.java` for the tasks description.
+- Check out `FlowView.java` for the tasks description.
+- [Documentation](https://vaadin.com/docs/next/components/slider) is available.
