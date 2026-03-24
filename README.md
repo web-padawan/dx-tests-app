@@ -10,7 +10,3 @@ You can also import the project to your IDE of choice as you would with any
 Maven project. Read more on [how to import Vaadin projects to different
 IDEs](https://vaadin.com/docs/latest/getting-started/import) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).
 
-## Tasks
-
-- Check out `FlowView.java` for the tasks description.
-- [Documentation](https://vaadin.com/docs/next/components/slider) is available.
