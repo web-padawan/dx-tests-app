@@ -4,3 +4,7 @@ target/
 node_modules/
 src/main/frontend/generated/
 vite.generated.ts
+
+# Claude Code
+.claude/*.local.*
+CLAUDE.local.md
