@@ -13,6 +13,7 @@ public class ProductDetailPlaceholder extends VerticalLayout {
         setAlignItems(Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
         getStyle().setPadding("var(--vaadin-gap-m)");
+        setSizeFull();
         add(message);
     }
 }

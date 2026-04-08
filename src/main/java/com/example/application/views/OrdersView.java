@@ -13,8 +13,8 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.signals.Signal;
 import com.vaadin.flow.signals.local.ValueSignal;
 
-@Route(value = "order-products")
-public class OrderProductsView extends Div {
+@Route(value = "orders")
+public class OrdersView extends Div {
 
     private final ValueSignal<Order> selectedOrder = new ValueSignal<>(null);
     private final ValueSignal<Product> selectedProduct = new ValueSignal<>(null);
@@ -29,7 +29,7 @@ public class OrderProductsView extends Div {
                 .toList();
     });
 
-    public OrderProductsView() {
+    public OrdersView() {
         setSizeFull();
 
         OrderList orderList = new OrderList(selectedOrder.asReadonly());
