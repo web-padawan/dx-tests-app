@@ -5,14 +5,6 @@
   "dependencies": {
     "@vaadin/aura": "25.2.0-alpha5",
     "@vaadin/common-frontend": "0.0.22",
-    "@vaadin/hilla-file-router": "25.2.0-alpha1",
-    "@vaadin/hilla-frontend": "25.2.0-alpha1",
-    "@vaadin/hilla-lit-form": "25.2.0-alpha1",
-    "@vaadin/hilla-react-auth": "25.2.0-alpha1",
-    "@vaadin/hilla-react-crud": "25.2.0-alpha1",
-    "@vaadin/hilla-react-form": "25.2.0-alpha1",
-    "@vaadin/hilla-react-i18n": "25.2.0-alpha1",
-    "@vaadin/hilla-react-signals": "25.2.0-alpha1",
     "@vaadin/react-components": "25.2.0-alpha5",
     "@vaadin/react-components-pro": "25.2.0-alpha5",
     "@vaadin/vaadin-development-mode-detector": "2.0.7",
@@ -61,14 +53,6 @@
     "dependencies": {
       "@vaadin/aura": "25.2.0-alpha5",
       "@vaadin/common-frontend": "0.0.22",
-      "@vaadin/hilla-file-router": "25.2.0-alpha1",
-      "@vaadin/hilla-frontend": "25.2.0-alpha1",
-      "@vaadin/hilla-lit-form": "25.2.0-alpha1",
-      "@vaadin/hilla-react-auth": "25.2.0-alpha1",
-      "@vaadin/hilla-react-crud": "25.2.0-alpha1",
-      "@vaadin/hilla-react-form": "25.2.0-alpha1",
-      "@vaadin/hilla-react-i18n": "25.2.0-alpha1",
-      "@vaadin/hilla-react-signals": "25.2.0-alpha1",
       "@vaadin/react-components": "25.2.0-alpha5",
       "@vaadin/react-components-pro": "25.2.0-alpha5",
       "@vaadin/vaadin-development-mode-detector": "2.0.7",
@@ -113,7 +97,7 @@
       "vite-plugin-checker": "0.12.0",
       "workbox-build": "7.4.0"
     },
-    "hash": "68a65c36bb4a09a1fa917b1854a3387a5f568539d8f89eaadd7d96f7ccd3db29"
+    "hash": "b2491c949a320dec3fc2e218adcba2ab4612b7c091b584a4bdf31b7d085e2052"
   },
   "overrides": {
     "@vaadin/vaadin-development-mode-detector": "$@vaadin/vaadin-development-mode-detector",
@@ -132,14 +116,6 @@
     "@vaadin/aura": "$@vaadin/aura",
     "ol": "$ol",
     "@vaadin/router": "2.0.1",
-    "@vaadin/hilla-frontend": "$@vaadin/hilla-frontend",
-    "@vaadin/hilla-react-auth": "$@vaadin/hilla-react-auth",
-    "@vaadin/hilla-react-crud": "$@vaadin/hilla-react-crud",
-    "@vaadin/hilla-file-router": "$@vaadin/hilla-file-router",
-    "@vaadin/hilla-react-i18n": "$@vaadin/hilla-react-i18n",
-    "@vaadin/hilla-lit-form": "$@vaadin/hilla-lit-form",
-    "@vaadin/hilla-react-form": "$@vaadin/hilla-react-form",
-    "@vaadin/hilla-react-signals": "$@vaadin/hilla-react-signals",
     "@vaadin/a11y-base": "25.2.0-alpha5",
     "@vaadin/accordion": "25.2.0-alpha5",
     "@vaadin/app-layout": "25.2.0-alpha5",
