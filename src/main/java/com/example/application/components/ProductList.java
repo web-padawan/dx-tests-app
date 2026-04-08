@@ -1,5 +1,7 @@
 package com.example.application.components;
 
+import java.util.List;
+
 import com.example.application.domain.Product;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
@@ -10,16 +12,23 @@ import com.vaadin.flow.signals.Signal;
 
 public class ProductList extends VerticalLayout {
 
-    public ProductList(Signal<Product> selectedProductSignal) {
-        Grid<Product> grid = new Grid<>();
+    private final Grid<Product> grid;
+
+    public ProductList(Signal<List<Product>> products, Signal<Product> selectedProduct) {
+        grid = new Grid<>();
         grid.addColumn(Product::getName).setHeader("Name");
         grid.addColumn(Product::getCategory).setHeader("Category");
         grid.addColumn(Product::getDateAdded).setHeader("Date Added");
         grid.addColumn(Product::getPrice).setHeader("Price");
         grid.setItems(Product.generateMockProducts());
         grid.setHeightFull();
-        grid.asSingleSelect().bindValue(selectedProductSignal, (product) -> {
+        grid.asSingleSelect().bindValue(selectedProduct, (product) -> {
             fireEvent(new ProductSelectedEvent(this, product));
+        });
+
+        Signal.effect(grid, () -> {
+            List<Product> items = products.get();
+            grid.setItems(items != null ? items : List.of());
         });
 
         add(grid);
