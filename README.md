@@ -10,3 +10,12 @@ You can also import the project to your IDE of choice as you would with any
 Maven project. Read more on [how to import Vaadin projects to different
 IDEs](https://vaadin.com/docs/latest/getting-started/import) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).
 
+## Test Tasks
+
+1. Task 1: see `ProductsView.java`
+
+1. Task 2: see `OrdersView.java`
+
+## Documentation
+
+See https://vaadin.com/docs/next/components/master-detail-layout
