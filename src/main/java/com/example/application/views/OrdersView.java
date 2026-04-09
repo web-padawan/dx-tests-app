@@ -58,9 +58,8 @@ public class OrdersView extends Div {
           This should push the order list to its minimum size
         - When a product is selected, make the product details fill all available space instead,
           pushing the product list to its minimum size as well
-        - Make the order details use a fixed width of 500px
+        - Make the order details use a fixed width of 600px
         - Make the product details use a fixed width of 300px
-        - Make the product details render under the product list instead of next to it
         */
 
         // Main Layout Configuration Start

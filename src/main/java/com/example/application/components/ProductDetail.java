@@ -4,7 +4,6 @@ import com.example.application.domain.Product;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.textfield.NumberField;
@@ -15,7 +14,6 @@ import com.vaadin.flow.signals.Signal;
 public class ProductDetail extends Div {
     private final TextField nameField;
     private final TextField categoryField;
-    private final DatePicker dateAddedField;
     private final NumberField priceField;
 
     public ProductDetail(Signal<Product> productSignal) {
@@ -35,12 +33,6 @@ public class ProductDetail extends Div {
                 productSignal.map((product) -> product != null ? product.getCategory() : ""),
                 null);
 
-        dateAddedField = new DatePicker("Date Added");
-        dateAddedField.setReadOnly(true);
-        dateAddedField.bindValue(
-                productSignal.map((product) -> product != null ? product.getDateAdded() : null),
-                null);
-
         priceField = new NumberField("Price");
         priceField.setReadOnly(true);
         priceField.bindValue(
@@ -50,7 +42,7 @@ public class ProductDetail extends Div {
         Button closeButton = new Button("Close");
         closeButton.addClickListener(event -> fireEvent(new CloseEvent(this, false)));
 
-        formLayout.add(nameField, categoryField, dateAddedField, priceField, closeButton);
+        formLayout.add(nameField, categoryField, priceField, closeButton);
 
         add(formLayout);
     }

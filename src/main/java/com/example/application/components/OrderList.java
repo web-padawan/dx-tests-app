@@ -4,11 +4,12 @@ import com.example.application.domain.Order;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.grid.GridVariant;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.shared.Registration;
 import com.vaadin.flow.signals.Signal;
 
-public class OrderList extends VerticalLayout {
+public class OrderList extends Div {
 
     public OrderList(Signal<Order> selectedOrderSignal) {
         Grid<Order> grid = new Grid<>();
@@ -17,15 +18,14 @@ public class OrderList extends VerticalLayout {
         grid.addColumn(Order::getOrderDate).setHeader("Date");
         grid.addColumn(Order::getStatus).setHeader("Status");
         grid.setItems(Order.generateMockOrders());
-        grid.setHeightFull();
+        grid.addThemeVariants(GridVariant.NO_BORDER);
+        grid.setSizeFull();
         grid.asSingleSelect().bindValue(selectedOrderSignal, (order) -> {
             fireEvent(new OrderSelectedEvent(this, order));
         });
-
         add(grid);
-        setHeightFull();
-        setSpacing(false);
-        setPadding(false);
+
+        setSizeFull();
     }
 
     public static class OrderSelectedEvent extends ComponentEvent<OrderList> {
