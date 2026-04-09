@@ -3,7 +3,7 @@ package com.example.application.views;
 import java.util.List;
 
 import com.example.application.components.ProductDetail;
-import com.example.application.components.ProductDetailPlaceholder;
+import com.example.application.components.ProductDetailEmptyState;
 import com.example.application.components.ProductList;
 import com.example.application.domain.Product;
 import com.vaadin.flow.component.html.Div;
@@ -25,8 +25,7 @@ public class ProductsView extends Div {
             selectedProduct.set(event.getProduct());
         });
 
-        ProductDetailPlaceholder productDetailPlaceholder = new ProductDetailPlaceholder();
-        productDetailPlaceholder.bindVisible(selectedProduct.map(product -> product == null));
+        ProductDetailEmptyState emptyProduct = new ProductDetailEmptyState();
 
         ProductDetail productDetail = new ProductDetail(selectedProduct);
         productDetail.addCloseListener(event -> {
@@ -36,7 +35,10 @@ public class ProductsView extends Div {
         // Layout Configuration Start
         HorizontalLayout productLayout = new HorizontalLayout();
         productLayout.setHeightFull();
-        productLayout.add(productList, productDetailPlaceholder);
+        productLayout.add(productList, emptyProduct);
+
+        emptyProduct.bindVisible(selectedProduct.map(product -> product == null));
+
         Signal.effect(productLayout, () -> {
             if (selectedProduct.get() != null) {
                 productLayout.add(productDetail);
