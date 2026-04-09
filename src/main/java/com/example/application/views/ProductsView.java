@@ -8,6 +8,7 @@ import com.example.application.components.ProductList;
 import com.example.application.domain.Product;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.dom.Style.BoxSizing;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.signals.Signal;
 import com.vaadin.flow.signals.local.ValueSignal;
@@ -19,6 +20,8 @@ public class ProductsView extends Div {
 
     public ProductsView() {
         setSizeFull();
+        getStyle().setBoxSizing(BoxSizing.BORDER_BOX);
+        getStyle().setPadding("var(--vaadin-padding-xl)");
 
         ProductList productList = new ProductList(products, selectedProduct);
         productList.addProductSelectedListener(event -> {
