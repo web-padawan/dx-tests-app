@@ -48,6 +48,21 @@ public class OrdersView extends Div {
             selectedProduct.set(null);
         });
 
+        /*
+        Task 2.1
+        - Replace both Horizontal Layouts with MasterDetailLayout
+        - Open both order and product detail and try resizing the browser
+
+        Task 2.2
+        - When product is not selected, make the product list fill all available space.
+          This should push the order list to its minimum size
+        - When a product is selected, make the product details fill all available space instead,
+          pushing the product list to its minimum size as well
+        - Make the order details use a fixed width of 500px
+        - Make the product details use a fixed width of 300px
+        - Make the product details render under the product list instead of next to it
+        */
+
         // Main Layout Configuration Start
         HorizontalLayout productLayout = new HorizontalLayout();
         productLayout.setSizeFull();

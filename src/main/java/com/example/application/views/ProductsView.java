@@ -32,6 +32,19 @@ public class ProductsView extends Div {
             selectedProduct.set(null);
         });
 
+        /*
+        Task 1.1
+        - Convert the view to use a Master-Detail Layout instead of Horizontal Layout
+        - Show the product details when a product is selected in the product list
+        - Make sure the empty state content is shown when there is no product selected
+
+        Task 1.2
+        - Make the product details use a fixed width of 300px
+        - Make the details open on top of the product list when the layout is narrower than 1000px
+        - Make the details fully cover the product list when opened on top of it
+        - Make the details cover the full page when opened
+        */
+
         // Layout Configuration Start
         HorizontalLayout productLayout = new HorizontalLayout();
         productLayout.setHeightFull();
