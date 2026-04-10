@@ -42,11 +42,11 @@ public class ProductsView extends Div {
         - Make sure the empty state content is shown when there is no product selected
 
         Task 1.2
-        - Make the product details use a fixed size of 300px
-        - Make the details open on top of the product list when the layout is narrower than 600px
+        - Set the details width to 300px
+        - Make the details open on top of the product list when the layout width is less than 600px
         - Make the details fully cover the product list when opened on top of it
         - Make the details cover the full page when opened
-        - Make the details render under the product list instead of next to it
+        - Make the details appear under the product list instead of next to it
         */
 
         // Layout Configuration Start

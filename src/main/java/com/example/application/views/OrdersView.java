@@ -54,15 +54,16 @@ public class OrdersView extends Div {
         - Open both order and product detail and try resizing the browser
 
         Task 2.2
-        - When product is not selected, make the product list fill all available space.
-          This should push the order list to its minimum size
-        - When a product is selected, make the product details fill all available space instead,
-          pushing the product list to its minimum size as well
-        - Make the order details use a fixed width of 600px
-        - Make the product details use a fixed width of 300px
+        - When no product is selected, make the product list fill all available space,
+          pushing the order list to its minimum size.
+        - When a product is selected, make the product details fill all available space
+          instead, pushing the product list to its minimum size as well
+        - Force the product details to always open on top of the product list
+        - Set the order details width to 600px
+        - Set the product details width to 300px
         */
 
-        // Main Layout Configuration Start
+        // Inner layout
         HorizontalLayout productLayout = new HorizontalLayout();
         productLayout.setSizeFull();
         productLayout.add(productList);
@@ -73,9 +74,8 @@ public class OrdersView extends Div {
                 productLayout.remove(productDetail);
             }
         });
-        // Main Layout Configuration End
 
-        // Inner Layout Configuration Start
+        // Outer layout
         HorizontalLayout orderLayout = new HorizontalLayout();
         orderLayout.setSizeFull();
         orderLayout.add(orderList);
@@ -86,7 +86,6 @@ public class OrdersView extends Div {
                 orderLayout.remove(productLayout);
             }
         });
-        // Inner Layout Configuration End
 
         add(orderLayout);
     }
